@@ -75,7 +75,7 @@ const ClassroomContent = () => {
           if (errorData.error.code === 100003) {
             alert("User already exists");
           } else if (errorData.error.code === 100004) {
-            alert("Email not found");
+            alert("Your email is not registered in the course %s".replace("%s", selectedCourse.name));
           } else {
             alert(`Error: ${errorData.error.message}`);
           }
